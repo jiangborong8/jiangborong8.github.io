@@ -710,6 +710,105 @@ img{
         border-radius:22px;
     }
 }
+    /* ===== 手机端排版修复 ===== */
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+@media(max-width:900px){
+    .process-grid{
+        grid-template-columns:1fr 1fr !important;
+        gap:16px;
+    }
+
+    .process-card{
+        padding:22px 18px;
+        min-height:auto;
+    }
+
+    .process-card h3{
+        font-size:19px;
+        line-height:1.4;
+        margin-bottom:8px;
+    }
+
+    .process-card p{
+        font-size:14px;
+        line-height:1.7;
+        word-break:normal;
+        white-space:normal;
+    }
+}
+
+@media(max-width:600px){
+    .process-grid{
+        grid-template-columns:1fr !important;
+        gap:16px;
+    }
+
+    .process-card{
+        border-radius:22px;
+        padding:24px 22px;
+    }
+
+    .process-number{
+        font-size:32px;
+        margin-bottom:6px;
+    }
+
+    .section-title{
+        margin-bottom:26px;
+    }
+
+    .section-title h2{
+        font-size:26px;
+        line-height:1.35;
+    }
+
+    .section-title p{
+        font-size:15px;
+        line-height:1.8;
+        padding:0 6px;
+    }
+
+    .case-card,
+    .service-card,
+    .trust-card{
+        padding:24px 22px;
+        border-radius:22px;
+    }
+
+    .case-card h3,
+    .service-card h3,
+    .trust-card h3{
+        font-size:20px;
+        line-height:1.45;
+    }
+
+    .case-card p,
+    .service-card p,
+    .trust-card p{
+        font-size:15px;
+        line-height:1.85;
+    }
+
+    .contact-section{
+        margin-left:0;
+        margin-right:0;
+        border-radius:28px;
+    }
+
+    .footer{
+        padding-bottom:110px;
+    }
+}
 </style>
 </head>
 
@@ -847,7 +946,7 @@ img{
             <p>流程清晰，减少客户沟通成本，让每一步都知道在做什么。</p>
         </div>
 
-        <div class="grid-4 process" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+        <div class="process-grid">
             <div class="process-card">
                 <div class="process-number">01</div>
                 <h3>免费测算额度</h3>
