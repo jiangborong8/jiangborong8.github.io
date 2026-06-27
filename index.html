@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>姜柏融｜资深贷款顾问</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+}
+
+:root{
+    --dark:#06111f;
+    --navy:#0b1f3a;
+    --blue:#0f4c81;
+    --gold:#d6a84f;
+    --gold-light:#f5d98b;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --bg:#f4f7fb;
+    --card:#ffffff;
+    --green:#16a34a;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+/* 顶部区域 */
+.hero{
+    position:relative;
+    min-height:720px;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(214,168,79,.25), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(15,76,129,.45), transparent 35%),
+        linear-gradient(135deg,#06111f 0%,#0b1f3a 55%,#07101c 100%);
+    color:white;
+    overflow:hidden;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size:48px 48px;
+    opacity:.35;
+}
+
+.nav{
+    position:relative;
+    z-index:2;
+    max-width:1180px;
+    margin:auto;
+    padding:24px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo-mark{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    background:linear-gradient(135deg,var(--gold),#fff2b8);
+    color:#081524;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+}
+
+.nav-phone{
+    color:#f9fafb;
+    border:1px solid rgba(255,255,255,.2);
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+}
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:1180px;
+    margin:auto;
+    padding:60px 20px 90px;
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    border-radius:999px;
+    color:var(--gold-light);
+    background:rgba(214,168,79,.12);
+    border:1px solid rgba(214,168,79,.35);
+    margin-bottom:22px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:56px;
+    line-height:1.15;
+    margin-bottom:18px;
+    letter-spacing:1px;
+}
+
+.hero h1 span{
+    color:var(--gold-light);
+}
+
+.hero-desc{
+    color:#dbeafe;
+    font-size:19px;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.hero-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:34px;
+}
+
+.hero-tags span{
+    padding:9px 14px;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    color:#e5e7eb;
+    font-size:14px;
+}
+
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px 28px;
+    border-radius:999px;
+    font-size:17px;
+    font-weight:700;
+    transition:.25s ease;
+    cursor:pointer;
+    border:none;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,var(--gold),#ffe29a);
+    color:#081524;
+    box-shadow:0 16px 35px rgba(214,168,79,.28);
+}
+
+.btn-dark{
+    background:rgba(255,255,255,.08);
+    color:white;
+    border:1px solid rgba(255,255,255,.18);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.profile-card{
+    position:relative;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:32px;
+    padding:32px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.profile-top{
+    text-align:center;
+}
+
+.avatar{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid rgba(214,168,79,.65);
+    box-shadow:0 20px 50px rgba(0,0,0,.38);
+    background:#fff;
+}
+
+.name{
+    font-size:34px;
+    font-weight:800;
+    margin-top:18px;
+}
+
+.title{
+    color:var(--gold-light);
+    font-size:18px;
+    margin-top:4px;
+}
+
+.profile-line{
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);
+    margin:26px 0;
+}
+
+.profile-list{
+    display:grid;
+    gap:14px;
+}
+
+.profile-list div{
+    padding:14px 16px;
+    border-radius:16px;
+    background:rgba(255,255,255,.07);
+    color:#e5e7eb;
+}
+
+/* 数据卡片 */
+.stats-wrap{
+    max-width:1180px;
+    margin:-70px auto 0;
+    padding:0 20px;
+    position:relative;
+    z-index:5;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    background:white;
+    border-radius:24px;
+    padding:28px 20px;
+    box-shadow:0 18px 45px rgba(15,23,42,.09);
+    border:1px solid rgba(15,23,42,.04);
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:34px;
+    color:var(--blue);
+    line-height:1.2;
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:15px;
+}
+
+/* 通用内容 */
+.container{
+    max-width:1180px;
+    margin:auto;
+    padding:70px 20px 30px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.section-title .sub{
+    color:var(--gold);
+    font-weight:700;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#111827;
+    margin-top:6px;
+}
+
+.section-title p{
+    color:var(--muted);
+    max-width:680px;
+    margin:8px auto 0;
+}
+
+.card{
+    background:white;
+    border-radius:28px;
+    padding:34px;
+    margin-bottom:26px;
+    box-shadow:0 18px 45px rgba(15,23,42,.07);
+    border:1px solid rgba(15,23,42,.04);
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.service-card,
+.process-card,
+.case-card,
+.trust-card{
+    background:#fff;
+    border-radius:24px;
+    padding:28px;
+    border:1px solid rgba(15,23,42,.06);
+    box-shadow:0 12px 30px rgba(15,23,42,.06);
+    transition:.25s ease;
+}
+
+.service-card:hover,
+.process-card:hover,
+.case-card:hover,
+.trust-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 45px rgba(15,23,42,.10);
+}
+
+.icon{
+    width:48px;
+    height:48px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#0f4c81,#123b66);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:18px;
+}
+
+.service-card h3,
+.process-card h3,
+.case-card h3,
+.trust-card h3{
+    font-size:21px;
+    margin-bottom:10px;
+    color:#111827;
+}
+
+.service-card p,
+.process-card p,
+.case-card p,
+.trust-card p{
+    color:var(--muted);
+    font-size:15px;
+}
+
+.process-number{
+    color:var(--gold);
+    font-size:38px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.highlight{
+    background:linear-gradient(135deg,#071524,#0b2545);
+    color:white;
+    border-radius:34px;
+    padding:42px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.highlight::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:rgba(214,168,79,.16);
+    right:-70px;
+    top:-80px;
+}
+
+.highlight h2{
+    font-size:32px;
+    margin-bottom:14px;
+}
+
+.highlight p{
+    color:#d1d5db;
+}
+
+.highlight-list{
+    display:grid;
+    gap:14px;
+    position:relative;
+    z-index:2;
+}
+
+.highlight-list div{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:18px;
+    padding:16px 18px;
+}
+
+/* 案例 */
+.case-tag{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:999px;
+    background:#eef5ff;
+    color:var(--blue);
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.case-result{
+    margin-top:18px;
+    padding:14px 16px;
+    border-radius:16px;
+    background:#f9fafb;
+    color:#111827;
+    font-weight:700;
+}
+
+/* 联系区域 */
+.contact-section{
+    background:
+        radial-gradient(circle at top left,rgba(214,168,79,.20),transparent 32%),
+        linear-gradient(135deg,#06111f,#0b1f3a);
+    color:white;
+    border-radius:34px;
+    padding:48px;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:36px;
+    align-items:center;
+    margin-top:50px;
+    box-shadow:0 25px 70px rgba(6,17,31,.22);
+}
+
+.contact-section h2{
+    font-size:36px;
+    margin-bottom:12px;
+}
+
+.contact-section p{
+    color:#d1d5db;
+}
+
+.phone{
+    font-size:42px;
+    font-weight:900;
+    color:var(--gold-light);
+    margin:20px 0;
+}
+
+.contact-box{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:26px;
+    padding:28px;
+}
+
+.wechat{
+    font-size:30px;
+    font-weight:900;
+    color:#86efac;
+    margin:10px 0 18px;
+}
+
+.copy-btn{
+    width:100%;
+    border:none;
+    background:linear-gradient(135deg,#16a34a,#22c55e);
+    color:white;
+    padding:15px 18px;
+    border-radius:999px;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.notice{
+    margin-top:22px;
+    font-size:13px;
+    color:#9ca3af;
+}
+
+/* 底部 */
+.footer{
+    background:#06111f;
+    color:white;
+    text-align:center;
+    padding:38px 20px 90px;
+    margin-top:70px;
+}
+
+.footer h3{
+    margin-bottom:8px;
+}
+
+.footer p{
+    color:#9ca3af;
+    font-size:14px;
+}
+
+/* 手机底部固定按钮 */
+.fixed-bar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:99;
+    background:rgba(255,255,255,.96);
+    border-top:1px solid rgba(15,23,42,.08);
+    padding:10px 14px;
+    display:none;
+    gap:10px;
+    box-shadow:0 -10px 25px rgba(0,0,0,.08);
+}
+
+.fixed-bar a,
+.fixed-bar button{
+    flex:1;
+    border:none;
+    border-radius:999px;
+    padding:12px 10px;
+    font-size:15px;
+    font-weight:800;
+    text-align:center;
+}
+
+.fixed-call{
+    background:#0f4c81;
+    color:white;
+}
+
+.fixed-wechat{
+    background:#16a34a;
+    color:white;
+}
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:88px;
+    transform:translateX(-50%);
+    background:#111827;
+    color:white;
+    padding:12px 18px;
+    border-radius:999px;
+    font-size:14px;
+    opacity:0;
+    pointer-events:none;
+    transition:.25s ease;
+    z-index:120;
+}
+
+.toast.show{
+    opacity:1;
+}
+
+/* 手机适配 */
+@media(max-width:900px){
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        padding:35px 20px 90px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-desc{
+        font-size:17px;
+    }
+
+    .profile-card{
+        padding:26px;
+    }
+
+    .avatar{
+        width:155px;
+        height:155px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .grid-3,
+    .grid-2,
+    .highlight,
+    .contact-section{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .contact-section{
+        padding:34px 24px;
+    }
+
+    .contact-section h2{
+        font-size:28px;
+    }
+
+    .phone{
+        font-size:31px;
+    }
+
+    .wechat{
+        font-size:25px;
+    }
+
+    .fixed-bar{
+        display:flex;
+    }
+}
+
+@media(max-width:520px){
+    .nav{
+        padding:18px 16px;
+    }
+
+    .nav-phone{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:33px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .stat{
+        padding:22px 12px;
+    }
+
+    .stat strong{
+        font-size:28px;
+    }
+
+    .container{
+        padding:55px 16px 20px;
+    }
+
+    .card{
+        padding:24px;
+        border-radius:22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="nav">
+        <div class="logo">
+            <div class="logo-mark">融</div>
+            <div>姜柏融｜贷款顾问</div>
+        </div>
+        <a href="tel:13061731274" class="nav-phone">咨询电话：13061731274</a>
+    </div>
+
+    <div class="hero-inner">
+        <div>
+            <div class="badge">银行贷款方案规划 · 免费初步测算</div>
+
+            <h1>
+                让客户少走弯路，<br>
+                找到更合适的<span>银行贷款方案</span>
+            </h1>
+
+            <p class="hero-desc">
+                专注房产抵押经营贷、工薪族消费贷，根据客户资质、房产情况、收入流水、征信情况，
+                协助匹配更合适的银行方案，让贷款办理更清晰、更透明、更高效。
+            </p>
+
+            <div class="hero-tags">
+                <span>免费测算额度</span>
+                <span>不影响征信初步评估</span>
+                <span>利息费用透明</span>
+                <span>一对一方案规划</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="tel:13061731274" class="btn btn-primary">📞 立即电话咨询</a>
+                <button class="btn btn-dark" onclick="copyWechat()">复制微信号</button>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-top">
+                <img src="avatar.png" alt="姜柏融" class="avatar">
+                <div class="name">姜柏融</div>
+                <div class="title">资深贷款顾问</div>
+            </div>
+
+            <div class="profile-line"></div>
+
+            <div class="profile-list">
+                <div>✅ 免费测算额度，先了解可做空间</div>
+                <div>✅ 根据资质匹配银行贷款方案</div>
+                <div>✅ 房产抵押经营贷 / 工薪族消费贷</div>
+                <div>✅ 利率、额度、费用提前说明清楚</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="stats-wrap">
+    <div class="stats">
+        <div class="stat">
+            <strong>1.51%</strong>
+            <span>利率低至</span>
+        </div>
+        <div class="stat">
+            <strong>3000万</strong>
+            <span>额度高至</span>
+        </div>
+        <div class="stat">
+            <strong>免费</strong>
+            <span>额度测算</span>
+        </div>
+        <div class="stat">
+            <strong>透明</strong>
+            <span>费用公开</span>
+        </div>
+    </div>
+</div>
+
+<main class="container">
+
+    <section>
+        <div class="section-title">
+            <div class="sub">SERVICE</div>
+            <h2>专注服务方向</h2>
+            <p>不是简单介绍产品，而是结合客户真实资质，判断适合哪类银行方案。</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="service-card">
+                <div class="icon">🏠</div>
+                <h3>房产抵押经营贷</h3>
+                <p>
+                    适合企业经营、资金周转、扩大经营规模、置换高息负债等需求。
+                    根据房产价值、经营情况、征信负债、流水情况综合匹配银行方案。
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">💼</div>
+                <h3>工薪族消费贷</h3>
+                <p>
+                    适合上班族、稳定收入人群，用于装修、购车、教育、消费周转等合规用途。
+                    协助判断额度空间、利率区间与审批通过率。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top:70px;">
+        <div class="highlight">
+            <div>
+                <div class="badge">为什么先做贷款规划？</div>
+                <h2>很多客户不是不能贷，而是没有选对方案。</h2>
+                <p>
+                    不同银行对于征信、负债、房产、流水、经营情况的要求不同。
+                    盲目申请容易浪费时间，甚至影响后续审批节奏。
+                </p>
+            </div>
+
+            <div class="highlight-list">
+                <div>先判断资质：能不能做、适合做哪类产品</div>
+                <div>再匹配方案：利率、额度、期限、还款方式</div>
+                <div>最后协助办理：资料准备、银行签约、审批跟进</div>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top:70px;">
+        <div class="section-title">
+            <div class="sub">PROCESS</div>
+            <h2>办理流程</h2>
+            <p>流程清晰，减少客户沟通成本，让每一步都知道在做什么。</p>
+        </div>
+
+        <div class="grid-4 process" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+            <div class="process-card">
+                <div class="process-number">01</div>
+                <h3>免费测算额度</h3>
+                <p>初步了解房产、收入、征信和资金需求，判断可操作空间。</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">02</div>
+                <h3>方案匹配</h3>
+                <p>根据客户情况匹配合适银行方案，说明利率、额度和费用。</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">03</div>
+                <h3>银行签约</h3>
+                <p>协助准备资料，对接银行流程，减少客户来回沟通成本。</p>
+            </div>
+
+            <div class="process-card">
+                <div class="process-number">04</div>
+                <h3>审批放款</h3>
+                <p>资料齐全、资质符合的情况下，协助推动审批与放款进度。</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top:70px;">
+        <div class="section-title">
+            <div class="sub">CASE</div>
+            <h2>客户案例展示</h2>
+            <p>以下为脱敏案例展示，具体方案需结合个人资质和银行审批结果。</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="case-card">
+                <div class="case-tag">房产抵押经营贷</div>
+                <h3>企业主资金周转</h3>
+                <p>
+                    客户名下有房产，经营中需要一笔周转资金。通过梳理房产价值、经营流水与负债情况，
+                    匹配更合适的银行抵押方案。
+                </p>
+                <div class="case-result">重点：控制成本，提高资金使用效率</div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-tag">工薪族消费贷</div>
+                <h3>稳定收入客户测额</h3>
+                <p>
+                    客户有稳定工资收入，但不清楚自己能申请多少额度。
+                    先做初步评估，再根据征信和收入情况判断适合的申请路径。
+                </p>
+                <div class="case-result">重点：先评估，再申请，减少盲目操作</div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-tag">方案优化</div>
+                <h3>降低融资成本</h3>
+                <p>
+                    客户原有资金成本偏高，希望调整为更合适的银行方案。
+                    通过分析现有负债结构，判断是否具备优化空间。
+                </p>
+                <div class="case-result">重点：看资质、看负债、看银行政策</div>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top:70px;">
+        <div class="section-title">
+            <div class="sub">TRUST</div>
+            <h2>服务承诺</h2>
+            <p>贷款不是只看额度，更重要的是方案是否适合、费用是否透明、流程是否清楚。</p>
+        </div>
+
+        <div class="grid-3">
+            <div class="trust-card">
+                <div class="icon">🔍</div>
+                <h3>免费初步评估</h3>
+                <p>先了解客户资质和需求，不盲目推荐，不上来就让客户乱申请。</p>
+            </div>
+
+            <div class="trust-card">
+                <div class="icon">📊</div>
+                <h3>方案清晰透明</h3>
+                <p>利率、额度、期限、还款方式、费用情况提前沟通清楚。</p>
+            </div>
+
+            <div class="trust-card">
+                <div class="icon">🤝</div>
+                <h3>一对一服务</h3>
+                <p>从前期测算、资料准备、银行对接到审批进度，全程协助跟进。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div>
+            <div class="badge">免费咨询</div>
+            <h2>想知道自己能贷多少、利率多少？</h2>
+            <p>
+                可以先联系我做一个初步测算。根据你的房产、收入、征信、负债和资金用途，
+                帮你判断更适合的银行方案。
+            </p>
+
+            <div class="phone">13061731274</div>
+
+            <div class="hero-actions">
+                <a href="tel:13061731274" class="btn btn-primary">📞 立即拨打电话</a>
+                <button class="btn btn-dark" onclick="copyWechat()">复制微信号</button>
+            </div>
+
+            <div class="notice">
+                温馨提示：贷款额度、利率、期限、审批结果以银行最终审核为准。本页面仅作贷款咨询服务介绍，不构成放款承诺。
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <h3>微信咨询</h3>
+            <div class="wechat" id="wechatText">me2026888</div>
+            <p>添加微信，发送你的基本情况，我帮你初步判断可做空间。</p>
+            <br>
+            <button class="copy-btn" onclick="copyWechat()">一键复制微信号</button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <h3>姜柏融｜资深贷款顾问</h3>
+    <p>专注房产抵押经营贷 · 工薪族消费贷 · 银行方案匹配</p>
+    <p>免费咨询：13061731274 ｜ 微信：me2026888</p>
+    <p style="margin-top:12px;">贷款结果以银行最终审批为准</p>
+</footer>
+
+<div class="fixed-bar">
+    <a href="tel:13061731274" class="fixed-call">电话咨询</a>
+    <button class="fixed-wechat" onclick="copyWechat()">复制微信</button>
+</div>
+
+<div class="toast" id="toast">微信号已复制：me2026888</div>
+
+<script>
+function copyWechat(){
+    const wechat = "me2026888";
+
+    if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(wechat).then(function(){
+            showToast();
+        }).catch(function(){
+            fallbackCopy(wechat);
+        });
+    }else{
+        fallbackCopy(wechat);
+    }
+}
+
+function fallbackCopy(text){
+    const input = document.createElement("input");
+    input.value = text;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    document.body.removeChild(input);
+    showToast();
+}
+
+function showToast(){
+    const toast = document.getElementById("toast");
+    toast.classList.add("show");
+    setTimeout(function(){
+        toast.classList.remove("show");
+    }, 2200);
+}
+</script>
+
+</body>
+</html>
